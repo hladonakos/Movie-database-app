@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../data/repositories/movie_repository_impl.dart';
-import '../../domain/entities/movie.dart';
+import 'package:movie/features/movies/data/repositories/movie_repository_impl.dart';
+import 'package:movie/features/movies/domain/entities/movie.dart';
 
 final popularMoviesProvider =
     FutureProvider.autoDispose.family<List<Movie>, int>((ref, page) async {

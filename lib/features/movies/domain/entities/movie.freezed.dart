@@ -16,13 +16,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$Movie {
-  int get ind => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get overview => throw _privateConstructorUsedError;
   String? get posterPath => throw _privateConstructorUsedError;
   String? get backdropPath => throw _privateConstructorUsedError;
   double get voteAverage => throw _privateConstructorUsedError;
-  int get voteCouunt => throw _privateConstructorUsedError;
+  int get voteCount => throw _privateConstructorUsedError;
   String get releaseDate => throw _privateConstructorUsedError;
   List<int> get genreIds => throw _privateConstructorUsedError;
   bool get isFavorite => throw _privateConstructorUsedError;
@@ -39,13 +39,13 @@ abstract class $MovieCopyWith<$Res> {
       _$MovieCopyWithImpl<$Res, Movie>;
   @useResult
   $Res call(
-      {int ind,
+      {int id,
       String title,
       String overview,
       String? posterPath,
       String? backdropPath,
       double voteAverage,
-      int voteCouunt,
+      int voteCount,
       String releaseDate,
       List<int> genreIds,
       bool isFavorite});
@@ -66,21 +66,21 @@ class _$MovieCopyWithImpl<$Res, $Val extends Movie>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ind = null,
+    Object? id = null,
     Object? title = null,
     Object? overview = null,
     Object? posterPath = freezed,
     Object? backdropPath = freezed,
     Object? voteAverage = null,
-    Object? voteCouunt = null,
+    Object? voteCount = null,
     Object? releaseDate = null,
     Object? genreIds = null,
     Object? isFavorite = null,
   }) {
     return _then(_value.copyWith(
-      ind: null == ind
-          ? _value.ind
-          : ind // ignore: cast_nullable_to_non_nullable
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as int,
       title: null == title
           ? _value.title
@@ -102,9 +102,9 @@ class _$MovieCopyWithImpl<$Res, $Val extends Movie>
           ? _value.voteAverage
           : voteAverage // ignore: cast_nullable_to_non_nullable
               as double,
-      voteCouunt: null == voteCouunt
-          ? _value.voteCouunt
-          : voteCouunt // ignore: cast_nullable_to_non_nullable
+      voteCount: null == voteCount
+          ? _value.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
               as int,
       releaseDate: null == releaseDate
           ? _value.releaseDate
@@ -130,13 +130,13 @@ abstract class _$$MovieImplCopyWith<$Res> implements $MovieCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int ind,
+      {int id,
       String title,
       String overview,
       String? posterPath,
       String? backdropPath,
       double voteAverage,
-      int voteCouunt,
+      int voteCount,
       String releaseDate,
       List<int> genreIds,
       bool isFavorite});
@@ -155,21 +155,21 @@ class __$$MovieImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? ind = null,
+    Object? id = null,
     Object? title = null,
     Object? overview = null,
     Object? posterPath = freezed,
     Object? backdropPath = freezed,
     Object? voteAverage = null,
-    Object? voteCouunt = null,
+    Object? voteCount = null,
     Object? releaseDate = null,
     Object? genreIds = null,
     Object? isFavorite = null,
   }) {
     return _then(_$MovieImpl(
-      ind: null == ind
-          ? _value.ind
-          : ind // ignore: cast_nullable_to_non_nullable
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as int,
       title: null == title
           ? _value.title
@@ -191,9 +191,9 @@ class __$$MovieImplCopyWithImpl<$Res>
           ? _value.voteAverage
           : voteAverage // ignore: cast_nullable_to_non_nullable
               as double,
-      voteCouunt: null == voteCouunt
-          ? _value.voteCouunt
-          : voteCouunt // ignore: cast_nullable_to_non_nullable
+      voteCount: null == voteCount
+          ? _value.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
               as int,
       releaseDate: null == releaseDate
           ? _value.releaseDate
@@ -215,20 +215,20 @@ class __$$MovieImplCopyWithImpl<$Res>
 
 class _$MovieImpl implements _Movie {
   const _$MovieImpl(
-      {required this.ind,
+      {required this.id,
       required this.title,
       required this.overview,
       this.posterPath,
       this.backdropPath,
       required this.voteAverage,
-      required this.voteCouunt,
+      required this.voteCount,
       required this.releaseDate,
       final List<int> genreIds = const [],
       this.isFavorite = false})
       : _genreIds = genreIds;
 
   @override
-  final int ind;
+  final int id;
   @override
   final String title;
   @override
@@ -240,7 +240,7 @@ class _$MovieImpl implements _Movie {
   @override
   final double voteAverage;
   @override
-  final int voteCouunt;
+  final int voteCount;
   @override
   final String releaseDate;
   final List<int> _genreIds;
@@ -258,7 +258,7 @@ class _$MovieImpl implements _Movie {
 
   @override
   String toString() {
-    return 'Movie(ind: $ind, title: $title, overview: $overview, posterPath: $posterPath, backdropPath: $backdropPath, voteAverage: $voteAverage, voteCouunt: $voteCouunt, releaseDate: $releaseDate, genreIds: $genreIds, isFavorite: $isFavorite)';
+    return 'Movie(id: $id, title: $title, overview: $overview, posterPath: $posterPath, backdropPath: $backdropPath, voteAverage: $voteAverage, voteCount: $voteCount, releaseDate: $releaseDate, genreIds: $genreIds, isFavorite: $isFavorite)';
   }
 
   @override
@@ -266,7 +266,7 @@ class _$MovieImpl implements _Movie {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MovieImpl &&
-            (identical(other.ind, ind) || other.ind == ind) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.overview, overview) ||
                 other.overview == overview) &&
@@ -276,8 +276,8 @@ class _$MovieImpl implements _Movie {
                 other.backdropPath == backdropPath) &&
             (identical(other.voteAverage, voteAverage) ||
                 other.voteAverage == voteAverage) &&
-            (identical(other.voteCouunt, voteCouunt) ||
-                other.voteCouunt == voteCouunt) &&
+            (identical(other.voteCount, voteCount) ||
+                other.voteCount == voteCount) &&
             (identical(other.releaseDate, releaseDate) ||
                 other.releaseDate == releaseDate) &&
             const DeepCollectionEquality().equals(other._genreIds, _genreIds) &&
@@ -288,13 +288,13 @@ class _$MovieImpl implements _Movie {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      ind,
+      id,
       title,
       overview,
       posterPath,
       backdropPath,
       voteAverage,
-      voteCouunt,
+      voteCount,
       releaseDate,
       const DeepCollectionEquality().hash(_genreIds),
       isFavorite);
@@ -310,19 +310,19 @@ class _$MovieImpl implements _Movie {
 
 abstract class _Movie implements Movie {
   const factory _Movie(
-      {required final int ind,
+      {required final int id,
       required final String title,
       required final String overview,
       final String? posterPath,
       final String? backdropPath,
       required final double voteAverage,
-      required final int voteCouunt,
+      required final int voteCount,
       required final String releaseDate,
       final List<int> genreIds,
       final bool isFavorite}) = _$MovieImpl;
 
   @override
-  int get ind;
+  int get id;
   @override
   String get title;
   @override
@@ -334,7 +334,7 @@ abstract class _Movie implements Movie {
   @override
   double get voteAverage;
   @override
-  int get voteCouunt;
+  int get voteCount;
   @override
   String get releaseDate;
   @override
@@ -347,6 +347,458 @@ abstract class _Movie implements Movie {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MovieImplCopyWith<_$MovieImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$MovieDetails {
+  int get id => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  String get overview => throw _privateConstructorUsedError;
+  String? get posterPath => throw _privateConstructorUsedError;
+  String? get backdropPath => throw _privateConstructorUsedError;
+  double get voteAverage => throw _privateConstructorUsedError;
+  int get voteCount => throw _privateConstructorUsedError;
+  String get releaseDate => throw _privateConstructorUsedError;
+  int get runtime => throw _privateConstructorUsedError;
+  String get status => throw _privateConstructorUsedError;
+  String? get tagline => throw _privateConstructorUsedError;
+  double get budget => throw _privateConstructorUsedError;
+  double get revenue => throw _privateConstructorUsedError;
+  List<Genre> get genres => throw _privateConstructorUsedError;
+  List<ProductionCompany> get productionCompanies =>
+      throw _privateConstructorUsedError;
+
+  /// Create a copy of MovieDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $MovieDetailsCopyWith<MovieDetails> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MovieDetailsCopyWith<$Res> {
+  factory $MovieDetailsCopyWith(
+          MovieDetails value, $Res Function(MovieDetails) then) =
+      _$MovieDetailsCopyWithImpl<$Res, MovieDetails>;
+  @useResult
+  $Res call(
+      {int id,
+      String title,
+      String overview,
+      String? posterPath,
+      String? backdropPath,
+      double voteAverage,
+      int voteCount,
+      String releaseDate,
+      int runtime,
+      String status,
+      String? tagline,
+      double budget,
+      double revenue,
+      List<Genre> genres,
+      List<ProductionCompany> productionCompanies});
+}
+
+/// @nodoc
+class _$MovieDetailsCopyWithImpl<$Res, $Val extends MovieDetails>
+    implements $MovieDetailsCopyWith<$Res> {
+  _$MovieDetailsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of MovieDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? title = null,
+    Object? overview = null,
+    Object? posterPath = freezed,
+    Object? backdropPath = freezed,
+    Object? voteAverage = null,
+    Object? voteCount = null,
+    Object? releaseDate = null,
+    Object? runtime = null,
+    Object? status = null,
+    Object? tagline = freezed,
+    Object? budget = null,
+    Object? revenue = null,
+    Object? genres = null,
+    Object? productionCompanies = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      overview: null == overview
+          ? _value.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String,
+      posterPath: freezed == posterPath
+          ? _value.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      backdropPath: freezed == backdropPath
+          ? _value.backdropPath
+          : backdropPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      voteAverage: null == voteAverage
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double,
+      voteCount: null == voteCount
+          ? _value.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      releaseDate: null == releaseDate
+          ? _value.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      runtime: null == runtime
+          ? _value.runtime
+          : runtime // ignore: cast_nullable_to_non_nullable
+              as int,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+      tagline: freezed == tagline
+          ? _value.tagline
+          : tagline // ignore: cast_nullable_to_non_nullable
+              as String?,
+      budget: null == budget
+          ? _value.budget
+          : budget // ignore: cast_nullable_to_non_nullable
+              as double,
+      revenue: null == revenue
+          ? _value.revenue
+          : revenue // ignore: cast_nullable_to_non_nullable
+              as double,
+      genres: null == genres
+          ? _value.genres
+          : genres // ignore: cast_nullable_to_non_nullable
+              as List<Genre>,
+      productionCompanies: null == productionCompanies
+          ? _value.productionCompanies
+          : productionCompanies // ignore: cast_nullable_to_non_nullable
+              as List<ProductionCompany>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MovieDetailsImplCopyWith<$Res>
+    implements $MovieDetailsCopyWith<$Res> {
+  factory _$$MovieDetailsImplCopyWith(
+          _$MovieDetailsImpl value, $Res Function(_$MovieDetailsImpl) then) =
+      __$$MovieDetailsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      String title,
+      String overview,
+      String? posterPath,
+      String? backdropPath,
+      double voteAverage,
+      int voteCount,
+      String releaseDate,
+      int runtime,
+      String status,
+      String? tagline,
+      double budget,
+      double revenue,
+      List<Genre> genres,
+      List<ProductionCompany> productionCompanies});
+}
+
+/// @nodoc
+class __$$MovieDetailsImplCopyWithImpl<$Res>
+    extends _$MovieDetailsCopyWithImpl<$Res, _$MovieDetailsImpl>
+    implements _$$MovieDetailsImplCopyWith<$Res> {
+  __$$MovieDetailsImplCopyWithImpl(
+      _$MovieDetailsImpl _value, $Res Function(_$MovieDetailsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MovieDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? title = null,
+    Object? overview = null,
+    Object? posterPath = freezed,
+    Object? backdropPath = freezed,
+    Object? voteAverage = null,
+    Object? voteCount = null,
+    Object? releaseDate = null,
+    Object? runtime = null,
+    Object? status = null,
+    Object? tagline = freezed,
+    Object? budget = null,
+    Object? revenue = null,
+    Object? genres = null,
+    Object? productionCompanies = null,
+  }) {
+    return _then(_$MovieDetailsImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      overview: null == overview
+          ? _value.overview
+          : overview // ignore: cast_nullable_to_non_nullable
+              as String,
+      posterPath: freezed == posterPath
+          ? _value.posterPath
+          : posterPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      backdropPath: freezed == backdropPath
+          ? _value.backdropPath
+          : backdropPath // ignore: cast_nullable_to_non_nullable
+              as String?,
+      voteAverage: null == voteAverage
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
+              as double,
+      voteCount: null == voteCount
+          ? _value.voteCount
+          : voteCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      releaseDate: null == releaseDate
+          ? _value.releaseDate
+          : releaseDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      runtime: null == runtime
+          ? _value.runtime
+          : runtime // ignore: cast_nullable_to_non_nullable
+              as int,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+      tagline: freezed == tagline
+          ? _value.tagline
+          : tagline // ignore: cast_nullable_to_non_nullable
+              as String?,
+      budget: null == budget
+          ? _value.budget
+          : budget // ignore: cast_nullable_to_non_nullable
+              as double,
+      revenue: null == revenue
+          ? _value.revenue
+          : revenue // ignore: cast_nullable_to_non_nullable
+              as double,
+      genres: null == genres
+          ? _value._genres
+          : genres // ignore: cast_nullable_to_non_nullable
+              as List<Genre>,
+      productionCompanies: null == productionCompanies
+          ? _value._productionCompanies
+          : productionCompanies // ignore: cast_nullable_to_non_nullable
+              as List<ProductionCompany>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$MovieDetailsImpl implements _MovieDetails {
+  const _$MovieDetailsImpl(
+      {required this.id,
+      required this.title,
+      required this.overview,
+      this.posterPath,
+      this.backdropPath,
+      required this.voteAverage,
+      required this.voteCount,
+      required this.releaseDate,
+      required this.runtime,
+      required this.status,
+      this.tagline,
+      required this.budget,
+      required this.revenue,
+      final List<Genre> genres = const [],
+      final List<ProductionCompany> productionCompanies = const []})
+      : _genres = genres,
+        _productionCompanies = productionCompanies;
+
+  @override
+  final int id;
+  @override
+  final String title;
+  @override
+  final String overview;
+  @override
+  final String? posterPath;
+  @override
+  final String? backdropPath;
+  @override
+  final double voteAverage;
+  @override
+  final int voteCount;
+  @override
+  final String releaseDate;
+  @override
+  final int runtime;
+  @override
+  final String status;
+  @override
+  final String? tagline;
+  @override
+  final double budget;
+  @override
+  final double revenue;
+  final List<Genre> _genres;
+  @override
+  @JsonKey()
+  List<Genre> get genres {
+    if (_genres is EqualUnmodifiableListView) return _genres;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_genres);
+  }
+
+  final List<ProductionCompany> _productionCompanies;
+  @override
+  @JsonKey()
+  List<ProductionCompany> get productionCompanies {
+    if (_productionCompanies is EqualUnmodifiableListView)
+      return _productionCompanies;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_productionCompanies);
+  }
+
+  @override
+  String toString() {
+    return 'MovieDetails(id: $id, title: $title, overview: $overview, posterPath: $posterPath, backdropPath: $backdropPath, voteAverage: $voteAverage, voteCount: $voteCount, releaseDate: $releaseDate, runtime: $runtime, status: $status, tagline: $tagline, budget: $budget, revenue: $revenue, genres: $genres, productionCompanies: $productionCompanies)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MovieDetailsImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.overview, overview) ||
+                other.overview == overview) &&
+            (identical(other.posterPath, posterPath) ||
+                other.posterPath == posterPath) &&
+            (identical(other.backdropPath, backdropPath) ||
+                other.backdropPath == backdropPath) &&
+            (identical(other.voteAverage, voteAverage) ||
+                other.voteAverage == voteAverage) &&
+            (identical(other.voteCount, voteCount) ||
+                other.voteCount == voteCount) &&
+            (identical(other.releaseDate, releaseDate) ||
+                other.releaseDate == releaseDate) &&
+            (identical(other.runtime, runtime) || other.runtime == runtime) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.tagline, tagline) || other.tagline == tagline) &&
+            (identical(other.budget, budget) || other.budget == budget) &&
+            (identical(other.revenue, revenue) || other.revenue == revenue) &&
+            const DeepCollectionEquality().equals(other._genres, _genres) &&
+            const DeepCollectionEquality()
+                .equals(other._productionCompanies, _productionCompanies));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      title,
+      overview,
+      posterPath,
+      backdropPath,
+      voteAverage,
+      voteCount,
+      releaseDate,
+      runtime,
+      status,
+      tagline,
+      budget,
+      revenue,
+      const DeepCollectionEquality().hash(_genres),
+      const DeepCollectionEquality().hash(_productionCompanies));
+
+  /// Create a copy of MovieDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MovieDetailsImplCopyWith<_$MovieDetailsImpl> get copyWith =>
+      __$$MovieDetailsImplCopyWithImpl<_$MovieDetailsImpl>(this, _$identity);
+}
+
+abstract class _MovieDetails implements MovieDetails {
+  const factory _MovieDetails(
+      {required final int id,
+      required final String title,
+      required final String overview,
+      final String? posterPath,
+      final String? backdropPath,
+      required final double voteAverage,
+      required final int voteCount,
+      required final String releaseDate,
+      required final int runtime,
+      required final String status,
+      final String? tagline,
+      required final double budget,
+      required final double revenue,
+      final List<Genre> genres,
+      final List<ProductionCompany> productionCompanies}) = _$MovieDetailsImpl;
+
+  @override
+  int get id;
+  @override
+  String get title;
+  @override
+  String get overview;
+  @override
+  String? get posterPath;
+  @override
+  String? get backdropPath;
+  @override
+  double get voteAverage;
+  @override
+  int get voteCount;
+  @override
+  String get releaseDate;
+  @override
+  int get runtime;
+  @override
+  String get status;
+  @override
+  String? get tagline;
+  @override
+  double get budget;
+  @override
+  double get revenue;
+  @override
+  List<Genre> get genres;
+  @override
+  List<ProductionCompany> get productionCompanies;
+
+  /// Create a copy of MovieDetails
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$MovieDetailsImplCopyWith<_$MovieDetailsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

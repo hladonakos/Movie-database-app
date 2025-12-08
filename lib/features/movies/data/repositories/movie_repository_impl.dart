@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import '../../../../core/errors/failures.dart';
 import '../../domain/entities/movie.dart';
-import '../../domain/repositories/movie_repository.dart';
+import 'package:movie/features/movies/domain/repositories/movie_repository.dart';
 import '../datasources/movie_remote_datasource.dart';
 
 class MovieRepositoryImpl implements MovieRepository {
@@ -57,7 +57,9 @@ class MovieRepositoryImpl implements MovieRepository {
   ) async {
     try {
       final response = await call();
-      final movies = response.results.map((m) => m.toEntity()).toList();
+      final results = (response.results as List);
+      final movies =
+          results.map((m) => (m as dynamic).toEntity() as Movie).toList();
       return Right(movies);
     } on DioException catch (e) {
       return Left(_handleDioError(e));

@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../../core/router/app_router.gr.dart';
-import '../../../movies/presentation/providers/movie_providers.dart';
-import '../../../movies/presentation/widgets/movie_grid.dart';
+import 'package:movie/core/router/app_router.dart';
+import 'package:movie/features/presentation/providers/movie_providers.dart';
+import 'package:movie/features/presentation/widgets/movie_grid.dart';
 
 @RoutePage()
 class SearchScreen extends ConsumerStatefulWidget {

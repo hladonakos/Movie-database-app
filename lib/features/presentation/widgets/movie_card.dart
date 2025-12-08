@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import '../../../../core/constants/api_constants.dart';
-import '../../domain/entities/movie.dart';
+import 'package:movie/features/movies/domain/entities/movie.dart';
 
 class MovieCard extends StatelessWidget {
   final Movie movie;
@@ -37,22 +37,45 @@ class MovieCard extends StatelessWidget {
             children: [
               // Poster image
               Positioned.fill(
-                child: CachedNetworkImage(
-                  imageUrl: ApiConstants.getPosterUrl(movie.posterPath),
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) => Shimmer.fromColors(
-                    baseColor: Colors.grey[300]!,
-                    highlightColor: Colors.grey[100]!,
-                    child: Container(color: Colors.grey[300]),
-                  ),
-                  errorWidget: (context, url, error) => Container(
-                    color: Colors.grey[800],
-                    child: const Icon(
-                      Icons.movie,
-                      size: 50,
-                      color: Colors.white54,
-                    ),
-                  ),
+                child: Builder(
+                  builder: (context) {
+                    final imageUrl =
+                        ApiConstants.getPosterUrl(movie.posterPath);
+                    debugPrint('===== LOADING IMAGE =====');
+                    debugPrint('Movie: ${movie.title}');
+                    debugPrint('Poster path: ${movie.posterPath}');
+                    debugPrint('Full URL: $imageUrl');
+
+                    return CachedNetworkImage(
+                      imageUrl: imageUrl,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) {
+                        debugPrint('Loading image for: ${movie.title}');
+                        return Shimmer.fromColors(
+                          baseColor: Colors.grey[300]!,
+                          highlightColor: Colors.grey[100]!,
+                          child: Container(color: Colors.grey[300]),
+                        );
+                      },
+                      errorWidget: (context, url, error) {
+                        debugPrint('===== IMAGE ERROR =====');
+                        debugPrint('Movie: ${movie.title}');
+                        debugPrint('URL: $url');
+                        debugPrint('Error: $error');
+                        debugPrint('Error type: ${error.runtimeType}');
+                        debugPrint('=======================');
+
+                        return Container(
+                          color: Colors.grey[800],
+                          child: const Icon(
+                            Icons.movie,
+                            size: 50,
+                            color: Colors.white54,
+                          ),
+                        );
+                      },
+                    );
+                  },
                 ),
               ),
 

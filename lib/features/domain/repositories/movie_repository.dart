@@ -1,6 +1,6 @@
 import 'package:fpdart/fpdart.dart';
 import '../../../../core/errors/failures.dart';
-import '../entities/movie.dart';
+import 'package:movie/features/movies/domain/entities/movie.dart';
 
 abstract class MovieRepository {
   Future<Either<Failure, List<Movie>>> getPopularMovies({int page = 1});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../domain/entities/movie.dart';
+import 'package:movie/features/movies/domain/entities/movie.dart';
 import 'movie_card.dart';
 
 class MovieGrid extends StatelessWidget {

@@ -11,6 +11,22 @@
 part of 'app_router.dart';
 
 /// generated route for
+/// [FavoritesScreen]
+class FavoritesRoute extends PageRouteInfo<void> {
+  const FavoritesRoute({List<PageRouteInfo>? children})
+    : super(FavoritesRoute.name, initialChildren: children);
+
+  static const String name = 'FavoritesRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const FavoritesScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -61,6 +77,48 @@ class MovieDetailsRouteArgs {
   @override
   String toString() {
     return 'MovieDetailsRouteArgs{key: $key, id: $id}';
+  }
+}
+
+/// generated route for
+/// [MovieListScreen]
+class MovieListRoute extends PageRouteInfo<MovieListRouteArgs> {
+  MovieListRoute({
+    Key? key,
+    required String category,
+    List<PageRouteInfo>? children,
+  }) : super(
+         MovieListRoute.name,
+         args: MovieListRouteArgs(key: key, category: category),
+         rawPathParams: {'category': category},
+         initialChildren: children,
+       );
+
+  static const String name = 'MovieListRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final pathParams = data.inheritedPathParams;
+      final args = data.argsAs<MovieListRouteArgs>(
+        orElse: () =>
+            MovieListRouteArgs(category: pathParams.getString('category')),
+      );
+      return MovieListScreen(key: args.key, category: args.category);
+    },
+  );
+}
+
+class MovieListRouteArgs {
+  const MovieListRouteArgs({this.key, required this.category});
+
+  final Key? key;
+
+  final String category;
+
+  @override
+  String toString() {
+    return 'MovieListRouteArgs{key: $key, category: $category}';
   }
 }
 

@@ -1,4 +1,3 @@
-import 'package:flutter/rendering.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'movie.freezed.dart';
@@ -6,20 +5,20 @@ part 'movie.freezed.dart';
 @freezed
 class Movie with _$Movie {
   const factory Movie({
-    required int ind,
+    required int id,
     required String title,
     required String overview,
     String? posterPath,
     String? backdropPath,
     required double voteAverage,
-    required int voteCouunt,
+    required int voteCount,
     required String releaseDate,
     @Default([]) List<int> genreIds,
     @Default(false) bool isFavorite,
   }) = _Movie;
 }
 
-@freezedclass
+@freezed
 class MovieDetails with _$MovieDetails {
   const factory MovieDetails({
     required int id,

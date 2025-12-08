@@ -1,9 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../../core/router/app_router.gr.dart';
+import 'package:movie/core/router/app_router.dart';
 import '../providers/movie_providers.dart';
 import '../widgets/movie_grid.dart';
+import 'package:movie/features/movies/domain/entities/movie.dart';
 
 @RoutePage()
 class HomeScreen extends ConsumerWidget {
@@ -94,7 +95,7 @@ class HomeScreen extends ConsumerWidget {
 
 class _MovieSection extends ConsumerWidget {
   final String title;
-  final AutoDisposeFutureProviderFamily provider;
+  final AutoDisposeFutureProvider<List<Movie>> provider;
   final VoidCallback? onSeeAll;
 
   const _MovieSection({
@@ -105,24 +106,45 @@ class _MovieSection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final moviesAsync = ref.watch(provider(1));
+    final moviesAsync = ref.watch(provider);
 
     return Padding(
       padding: const EdgeInsets.only(top: 24),
       child: moviesAsync.when(
-        data: (movies) => MovieHorizontalList(
-          title: title,
-          movies: movies.take(10).toList(),
-          onMovieTap: (movie) =>
-              context.router.push(MovieDetailsRoute(id: movie.id)),
-          onSeeAllTap: onSeeAll,
-        ),
-        loading: () => _LoadingSection(title: title),
-        error: (error, stack) => _ErrorSection(
-          title: title,
-          error: error.toString(),
-          onRetry: () => ref.invalidate(provider),
-        ),
+        data: (movies) {
+          debugPrint('===== DATA RECEIVED =====');
+          debugPrint('Title: $title');
+          debugPrint('Movies count: ${movies.length}');
+          debugPrint('=========================');
+
+          return MovieHorizontalList(
+            title: title,
+            movies: movies.take(10).toList(),
+            onMovieTap: (movie) =>
+                context.router.push(MovieDetailsRoute(id: movie.id)),
+            onSeeAllTap: onSeeAll,
+          );
+        },
+        loading: () {
+          debugPrint('===== LOADING =====');
+          debugPrint('Title: $title');
+          debugPrint('===================');
+          return _LoadingSection(title: title);
+        },
+        error: (error, stack) {
+          debugPrint('===== PROVIDER ERROR =====');
+          debugPrint('Title: $title');
+          debugPrint('Error: $error');
+          debugPrint('Error type: ${error.runtimeType}');
+          debugPrint('Stack: $stack');
+          debugPrint('==========================');
+
+          return _ErrorSection(
+            title: title,
+            error: error.toString(),
+            onRetry: () => ref.invalidate(provider),
+          );
+        },
       ),
     );
   }

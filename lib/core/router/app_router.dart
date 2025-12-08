@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-
-import '../../features/movies/presentation/screens/home_screen.dart';
-import '../../features/movies/presentation/screens/movie_details_screen.dart';
-import '../../features/movies/presentation/screens/movie_list_screen.dart';
+import 'package:flutter/material.dart';
+import '../../features/presentation/screens/home_screen.dart';
+import '../../features/presentation/screens/movie_details_screen.dart';
+import '../../features/presentation/screens/movie_list_screen.dart';
 import '../../features/search/presentation/screens/search_screen.dart';
 import '../../features/favorites/presentation/screens/favorites_screen.dart';
 

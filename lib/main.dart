@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
-import 'features/favorites/data/favorites_local_datasource.dart';
+import 'features/favorites/data/datasources/favorites_local_datasource.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,19 +10,19 @@ void main() async {
   await initFavoritesStorage();
 
   runApp(
-    ProviderScope(
+    const ProviderScope(
       child: MovieApp(),
     ),
   );
 }
 
 class MovieApp extends StatelessWidget {
-  MovieApp({super.key});
-
-  final _appRouter = AppRouter();
+  const MovieApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final appRouter = AppRouter();
+
     return MaterialApp.router(
       title: 'Movie App',
       debugShowCheckedModeBanner: false,
