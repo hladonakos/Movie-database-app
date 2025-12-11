@@ -2,7 +2,7 @@
 
 A modern, cross-platform movie database application built with Flutter, allowing users to browse, search, and view detailed information about movies.
 
-<<<<<<< HEAD
+
 ## ✨ Features
 
 - 🔍 Search movies by title
@@ -15,11 +15,7 @@ A modern, cross-platform movie database application built with Flutter, allowing
 - ❤️ Favorite movies list
 - 🎥 Watch trailers
 
-## 🛠️ Tech Stack
-
 =======
-## 📸 Screenshots
-
 ## 📸 Screenshots
 
 <p align="center">
@@ -28,21 +24,8 @@ A modern, cross-platform movie database application built with Flutter, allowing
   <img src="screenshots/Screenshot from 2025-12-11 20-40-41.png" width="250" alt="Movie Details"/>
 </p>
 
-## ✨ Features
-
-- 🔍 Search movies by title
-- 📋 Browse popular and latest movies
-- ⭐ View detailed movie information (ratings, descriptions, release dates)
-- 🎭 Filter by genres
-- 💾 Offline support with caching
-- 🌙 Dark/Light theme support
-- 📱 Responsive design for all screen sizes
-- ❤️ Favorite movies list
-- 🎥 Watch trailers
-
 ## 🛠️ Tech Stack
 
->>>>>>> 81476a5 (Add app screenshots and update readme)
 - **Framework:** Flutter
 - **Language:** Dart
 - **State Management:** Riverpod
@@ -53,10 +36,6 @@ A modern, cross-platform movie database application built with Flutter, allowing
 - **Navigation:** AutoRoute
 - **Code Generation:** Freezed, JSON Serializable
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 81476a5 (Add app screenshots and update readme)
 ## 📁 Project Structure
 
 ```
