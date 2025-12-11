@@ -131,8 +131,7 @@ This project follows **Clean Architecture** principles with three main layers:
 - **Domain Layer:** Business logic, entities, and use cases
 - **Data Layer:** API integration, local storage, and repositories
 
-1. 
->>>>>>> 81476a5 (Add app screenshots and update readme)
+
 
 ## 📝 License
 
