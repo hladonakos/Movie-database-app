@@ -15,7 +15,7 @@ A modern, cross-platform movie database application built with Flutter, allowing
 - ❤️ Favorite movies list
 - 🎥 Watch trailers
 
-=======
+
 ## 📸 Screenshots
 
 <p align="center">
@@ -63,12 +63,6 @@ lib/
 
 ## 📦 Key Dependencies
 
-<<<<<<< HEAD
-=======
-yaml
-
->>>>>>> 81476a5 (Add app screenshots and update readme)
-```yaml
 dependencies:
   # State Management
   flutter_riverpod: ^2.5.1
@@ -106,8 +100,6 @@ dev_dependencies:
   mocktail: ^1.0.3
 ```
 
-<<<<<<< HEAD
-=======
 ## 🏗️ Architecture
 
 This project follows **Clean Architecture** principles with three main layers:
