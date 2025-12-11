@@ -23,7 +23,7 @@ A modern, cross-platform movie database application built with Flutter, allowing
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshots/Screenshot from 2025-12-11 20-46-51.png" width="250" alt="Home Screen"/>
+  <img src="Screenshot from 2025-12-11 21-04-23.png" width="250" alt="Home Screen"/>
   <img src="screenshots/Screenshot from 2025-12-11 20-40-11.png" width="250" alt="Popular Movies"/>
   <img src="screenshots/Screenshot from 2025-12-11 20-40-41.png" width="250" alt="Movie Details"/>
 </p>
