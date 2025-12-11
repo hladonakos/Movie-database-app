@@ -2,6 +2,7 @@
 
 A modern, cross-platform movie database application built with Flutter, allowing users to browse, search, and view detailed information about movies.
 
+<<<<<<< HEAD
 ## ✨ Features
 
 - 🔍 Search movies by title
@@ -16,6 +17,26 @@ A modern, cross-platform movie database application built with Flutter, allowing
 
 ## 🛠️ Tech Stack
 
+=======
+## 📸 Screenshots
+
+<p align="center">   <img src="screenshots/home_screen.png" width="250" alt="Home Screen"/>   <img src="screenshots/popular_movies.png" width="250" alt="Popular Movies"/>   <img src="screenshots/movie_details.png" width="250" alt="Movie Details"/> </p>
+
+## ✨ Features
+
+- 🔍 Search movies by title
+- 📋 Browse popular and latest movies
+- ⭐ View detailed movie information (ratings, descriptions, release dates)
+- 🎭 Filter by genres
+- 💾 Offline support with caching
+- 🌙 Dark/Light theme support
+- 📱 Responsive design for all screen sizes
+- ❤️ Favorite movies list
+- 🎥 Watch trailers
+
+## 🛠️ Tech Stack
+
+>>>>>>> 81476a5 (Add app screenshots and update readme)
 - **Framework:** Flutter
 - **Language:** Dart
 - **State Management:** Riverpod
@@ -26,7 +47,10 @@ A modern, cross-platform movie database application built with Flutter, allowing
 - **Navigation:** AutoRoute
 - **Code Generation:** Freezed, JSON Serializable
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81476a5 (Add app screenshots and update readme)
 ## 📁 Project Structure
 
 ```
@@ -54,6 +78,11 @@ lib/
 
 ## 📦 Key Dependencies
 
+<<<<<<< HEAD
+=======
+yaml
+
+>>>>>>> 81476a5 (Add app screenshots and update readme)
 ```yaml
 dependencies:
   # State Management
@@ -92,6 +121,18 @@ dev_dependencies:
   mocktail: ^1.0.3
 ```
 
+<<<<<<< HEAD
+=======
+## 🏗️ Architecture
+
+This project follows **Clean Architecture** principles with three main layers:
+
+- **Presentation Layer:** UI components, widgets, and state management
+- **Domain Layer:** Business logic, entities, and use cases
+- **Data Layer:** API integration, local storage, and repositories
+
+1. 
+>>>>>>> 81476a5 (Add app screenshots and update readme)
 
 ## 📝 License
 
